@@ -273,7 +273,7 @@ void storestudentinfo(int rollnum,string name,dsa &d1,se &s1,mis &m1,iot &i1,sta
     newnode->mis_TW=m1.misTW;
     newnode->stats_TW=q1.statsTW;
     int index=rollnum;
-    if(hashtable[index]!=NULL){
+    if(hashtable[index]==NULL){
     hashtable[index]=newnode;
     }
     else{
@@ -300,6 +300,7 @@ void deletedata(int roll){
 }
 void displayalltadata(){
     for(int i=1;i<=max;i++){
+        if(hashtable[i]!=NULL){
             cout<<"-------------------------------------------"<<endl;
             cout<<"Name of the student is "<<hashtable[i]->name<<endl;
             cout<<"Roll number "<<hashtable[i]->rollnumber<<endl;
@@ -309,6 +310,10 @@ void displayalltadata(){
             cout<<"Term work in iot is "<<hashtable[i]->iot_TW<<endl;
             cout<<"Term work in stats is "<<hashtable[i]->stats_TW<<endl;
             cout<<"-------------------------------------------"<<endl;
+        }
+        else{
+            cout<<i<<".) No data available."<<endl;
+        }
     }
 }
 };
