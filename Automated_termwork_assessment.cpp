@@ -3,7 +3,6 @@
 using namespace std;
 class baseinfo{
 public:
-// int dsaTW,seTW,misTW,statsTW,iotTW;
 static int tdsaLEC,tseLEC,tmisLEC,tstatsLEC,tiotLEC;
 static int tdsaASSIGN,tseASSIGN,tmisASSIGN,tstatsASSIGN,tiotASSIGN;
 static int tdsaUT,tseUT,tmisUT,tstatsUT,tiotUT;
